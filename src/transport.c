@@ -638,7 +638,7 @@ int _libssh2_transport_read(LIBSSH2_SESSION * session)
                  */
                 total_num = 4;
 
-                p->packet_length = ssh2_ntohu32(block);
+                p->packet_length = _libssh2_ntohu32(block);
                 if(p->packet_length < 1) {
                     return LIBSSH2_ERROR_DECRYPT;
                 }

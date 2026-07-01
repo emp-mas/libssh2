@@ -3895,7 +3895,7 @@ static int sftp_symlink(LIBSSH2_SFTP *sftp, const char *path,
 
     sftp->symlink_state = libssh2_NB_state_idle;
 
-    buf.data = (unsigned char *)LIBSSH2_UNCONST(data);
+    buf.data = (unsigned char *)data;
     buf.dataptr = buf.data;
     buf.len = data_len;
 
